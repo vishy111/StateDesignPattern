@@ -5,30 +5,42 @@
  */
 public class HuluState implements State {
 	private TV tv;
-	
+	/**
+	 * Constructor for Hulustate
+	 * @param tv through the constructor
+	 */
 	public HuluState(TV tv) {
 		this.tv=tv;
 	}
+	/**
+	 * Loads and changes State
+	 */
 	@Override
 	public void pressHomeButton() {
 		// TODO Auto-generated method stub
 		System.out.println("Loading the Home Screen...");
 		tv.setState(tv.getHomeState());
 	}
-
+	/**
+	 * Loads and Changes State
+	 */
 	@Override
 	public void pressNetflixButton() {
 		// TODO Auto-generated method stub
 		System.out.println("Loading Netflix... \n");
 		tv.setState(tv.getNetflixState());
 	}
-
+	/**
+	 * Loads State
+	 */
 	@Override
 	public void pressHuluButton() {
 		// TODO Auto-generated method stub
 		System.out.println("We are already in Hulu...\n");
 	}
-
+	/**
+	 * Loop through and displays movie
+	 */
 	@Override
 	public void pressMovieButton() {
 		// TODO Auto-generated method stub
@@ -41,7 +53,9 @@ public class HuluState implements State {
 		}
 		System.out.println("\n");
 	}
-
+	/**
+	 * Loops through displays tv shows
+	 */
 	@Override
 	public void pressTVButton() {
 		// TODO Auto-generated method stub
